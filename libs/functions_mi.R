@@ -63,11 +63,12 @@ par_discretizer <- function(expmatrix, korez = 2, diskz = "equalfreq"){
 
 #MI calculation 
 
-mi_calc <- function(sources, targets){
+mi_calc <- function(sources, targets, methodz="emp"){
   lapply(X = sources, FUN = function(i){
     sapply(X = targets, FUN = function(j){
       infotheo::mutinformation(X = i, 
-                               Y = j)
+                               Y = j,
+                               method = methodz)
     })
   })
 }
@@ -76,7 +77,8 @@ par_mi_calc <- function(sources, targets, korez = 2){
   parallel::mclapply(X = sources, mc.cores = korez, FUN = function(i){
     sapply(X = targets, FUN = function(j){
       infotheo::mutinformation(X = i, 
-                               Y = j)
+                               Y = j,
+                               method = methodz)
     })
   })
 }
