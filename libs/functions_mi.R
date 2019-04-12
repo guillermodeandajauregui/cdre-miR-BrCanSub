@@ -75,7 +75,7 @@ mi_calc <- function(sources, targets, methodz="emp"){
   })
 }
 
-par_mi_calc <- function(sources, targets, korez = 2){
+par_mi_calc <- function(sources, targets, korez = 2, methodz="emp"){
   parallel::mclapply(X = sources, mc.cores = korez, FUN = function(i){
     sapply(X = targets, FUN = function(j){
       ni <- as.numeric(i)
