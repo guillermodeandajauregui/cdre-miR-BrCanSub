@@ -6,9 +6,9 @@
 ####################
 
 #packrat unbundle
-packrat::on()
+#packrat::on()
 #packrat::unbundle(bundle = "packrat/bundles/cdre-miR-BrCanSub-2019-04-10.tar.gz", where = ".")
-packrat::restore()
+#packrat::restore()
 
 #libraries
 library("infotheo")
