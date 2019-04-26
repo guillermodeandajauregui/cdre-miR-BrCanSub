@@ -37,7 +37,7 @@ enrich.neighbors.cdre <- function(nw){
   
    my_results <-
    lapply(cdre_neighbors, FUN = function(j){
-     r1 <- HTSanalyzeR::multiHyperGeoTest(collectionOfGeneSets = GO_ALL_SYMBOL,
+     r1 <- HTSanalyzeR::multiHyperGeoTest(collectionOfGeneSets = GO_data,
                                     universe = my_universe,
                                     hits = j,
                                     minGeneSetSize = 10,
@@ -85,3 +85,4 @@ saveRDS(EnrichmentList, file = "EnrichmentOutput.RDS")
 FilteredList <- FilterMyList(EnrichmentList)
 
 FilteredList$basal$`hsa-mir-136` %>% pull(rowname)
+
