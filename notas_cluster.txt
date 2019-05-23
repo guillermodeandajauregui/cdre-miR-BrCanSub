@@ -1,0 +1,9 @@
+1 copiar TODO el repo con scp 
+O
+1 montar en sistema de archivos con sshfs
+
+2 cambiar los permisos para ejecutar sh (o lo que se vaya a ejecutar) 
+3 correr packrat::restore() sobre el dir del proyecto
+4 usar condor para generar un machote del condor.submit file
+5 adaptar condor.submit file
+6 condor_submit

@@ -2,7 +2,7 @@ library(data.table)
 library(tidyverse)
 library(igraph)
 
-my_files <- list.files("results", full.names = TRUE)[c(3,4,1,2)]
+my_files <- list.files("results", full.names = TRUE, pattern = "mi.tsv")[c(3,4,1,2)]
 my_names <- c("luma", "lumb", "basal", "her2")
 
 

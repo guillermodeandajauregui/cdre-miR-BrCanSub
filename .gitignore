@@ -34,3 +34,22 @@ vignettes/*.pdf
 
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
+.Rproj.user
+packrat/lib*/
+packrat/
+
+#things I don't want to carry
+data/
+results/
+basal/
+her2/
+luma/
+lumb/
+pruebas/
+prueba_med/
+*.RDS
+*.submit 
+*.tsv
+*.sh
+for_presentation/
+
