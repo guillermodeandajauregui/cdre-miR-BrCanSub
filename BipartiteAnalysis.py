@@ -50,7 +50,7 @@ nx.set_node_attributes(F,
 #if redundancy fails with  Cannot compute redundancy coefficient for a node that has fewer than two neighbors
 redundancia= dict()
 for nodo in F.nodes():
-    if F.node[nodo]["grado"]<3:
+    if F.nodes[nodo]["grado"]<3:
         redundancia[nodo] = 0
     else:
         redundancia[nodo] = nx.bipartite.node_redundancy(F, nodes = [nodo])[nodo]
